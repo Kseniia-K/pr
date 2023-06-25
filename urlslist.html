@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ссылки</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgb(168, 222, 254);
+        }
+        h1 {
+            margin-top: 100px;
+        }
+        form {
+            background-color: white;
+            min-width: 500px;
+            max-width: 700px;
+            min-height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 15px;
+        }
+        .trUrls {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            box-sizing: border-box;
+        }
+        button {
+            margin-top: 25px;
+        }
+        .tdButton{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Выберите ссылку</h1>
+    <form action="http://localhost:3000/" name="urlForm" method="get">
+        <table>
+            {content}
+            <tr>
+                <td class="tdButton">
+                    <button type="submit" id="submitUrl">Скачать контент</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практика</title>
+    <!-- <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+        h1 {
+            text-align: center;
+        }
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style> -->
+</head>
+<body>
+    <h1>Получите ссылки по ключевому слову</h1>
+    <section>
+        <form method="post">
+            <label>Введите ключевое слово:</label><br>
+            <input type="text" name="keyword" /><br><br>
+            <button type="submit" id="submit">Отправить</button>
+        </form>
+    </section>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практика</title>
+</head>
+<body>
+    <h1>Получите ссылки по ключевому слову</h1>
+    <form name="registerForm">
+        <label>Введите ключевое слово:</label><br>
+        <input type="text" name="keyword" /><br><br>
+        <button type="submit" id="submit">Отправить</button>
+    </form>
+    <script>
+        document.getElementById("submit").addEventListener("click", function (e) {
+            e.preventDefault();
+            // получаем данные формы
+            let registerForm = document.forms["registerForm"];
+            let keyword = registerForm.elements["keyword"].value;
+            // сериализуем данные в json
+            let word = JSON.stringify({keyword: keyword});
+            let request = new XMLHttpRequest();
+            // посылаем запрос на адрес "/user"
+            request.open("POST", "/urls", true);
+            request.setRequestHeader("Content-Type", "application/json");
+            request.addEventListener("load", function(){
+                // получаем и парсим ответ сервера
+                let receivedUrls = JSON.parse(request.response);
+                console.log(receivedUrls.keyword);
+            });
+            request.send(word);
+        });
+    </script>
+</body>
+</html> -->
